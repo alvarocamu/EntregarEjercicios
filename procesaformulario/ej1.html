@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<!--Formulario post
+Crear un formulario en html
+con un campo de texto que solicite el nombre del usuario
+un campo de tipo fecha que solicite su fecha de nacimiento
+Un campo tipo select que indique su sexo.
+un campo tipo radio 1-no tiene estudios, 2-estudios primarios, 3-estudios secundarios
+Un campo tipo checkbox ,ckecked por default, que diga que quiero recibir información periódicamente
+Un campo tipo checkbox que diga que acepto las condiciones del servicio
+Procesar el formulario mediante post y el la página procesada
+saludar al usuario (implicando su sexo y su nombre), Ejemplo Hola, querido amig(o/a), nombre
+decirle su edad
+decirle un mensaje personalizado según los estudios
+Si desea recibir información le informamos de los cursos que tenemos-->
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+ 	</head>
+	<body>
+		<form action="procesa.php" method="POST">
+			<label>Nombre</label><input required="required" type="text"name="nombre" />
+			<br/>
+			<label>Fecha de nacimiento</label><input name="fecha" type="date"/>
+			<br/>
+			<label>Sexo</label>
+			<select required="required" name="sexo">
+				<option value=""></option>	
+				<option value="hombre">H</option>	
+				<option value="mujer">M</option>			
+			</select>
+			<br/>
+			<label>No tiene estudios</label>
+			<input required="required" type="radio" name="estudios" value="no"/>
+			<label>Estudios primarios</label>
+			<input required="required" type="radio" name="estudios" value="primarios"/>
+			<label>Estudios secundarios</label>
+			<input required="required" type="radio" name="estudios" value="secundarios"/>
+			<br/>
+			<label>Quiero recibir información periódicamente</label><input type="checkbox" name="publi" checked="checked"/>
+			<br/>
+			<label>Acepto las condiciones del servicio</label><input type="checkbox" name="condiciones"/>
+			<button>Enviar</button>
+		</form>
+	</body>
+</html>
