@@ -13,6 +13,9 @@
 			<label for="mail">Para:</label>
 			<input type="text" name="mail"/>
 			<br/>
+			<label for="mail2">Tu e-mail:</label>
+			<input type="text" name="mail"/>
+			<br/>
 			<label for="asunto">Asunto</label>
 			<input type="text" name="asunto"/>
 			<br/>
@@ -21,12 +24,13 @@
 		</form>
 		<?php
 			
-			if(empty($_POST['nombre']) && empty($_POST['asunto'])&& empty($_POST['mail'])&& empty($_POST['comentario'])){
+			if(empty($_POST['nombre']) && empty($_POST['asunto'])&& empty($_POST['mail'])&& empty($_POST['mail2'])&& empty($_POST['comentario'])){
 				
 			}else{
 				$nombre = $_POST['nombre'];
 				$para= $_POST['mail'];
-				$asunto= $nombre.": ".$_POST['asunto'];
+				$de= $_POST['mail2'];
+				$asunto= $nombre.": ".$_POST['asunto']." ".$de;
 				$comentario= $_POST['comentario'];
 				
 				mail($para, $asunto, $comentario);
