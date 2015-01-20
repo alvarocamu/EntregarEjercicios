@@ -53,11 +53,13 @@ Limitar el párrafo a cuatro palabras-->
 			
 			//parrafo en 4 palabras
 			$vectorcadena=explode(" ",$cadena);
-			//	$vectorcortado=array_slice($vectorcadena,0,3);
 			for($i=0;$i<4;$i++){
 				echo $vectorcadena[$i]." ";
 			}
-			//echo "<br/>".$vectorcadena[0]." ".$vectorcadena[1]." ".$vectorcadena[2]." ".$vectorcadena[3];
+			//	$vectorcortado=array_slice($vectorcadena,0,4);
+			//  $vectorunido=implode(vectorcortado," ");
+			//	echo $vectorunido;
+			
 		 ?>
 	</body>
 </html>
